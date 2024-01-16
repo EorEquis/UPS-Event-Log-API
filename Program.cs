@@ -7,8 +7,15 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 app.UseSwagger();
-app.UseSwaggerUI();
+app.UseSwaggerUI(c =>
+{
+    // Configure the Swagger endpoint to use the /api prefix
+    c.RoutePrefix = "api";
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "UPS Log Monitor API");
+});
+
 app.UseRouting();
+
 
 app.Map("/upsData", app =>
 {
