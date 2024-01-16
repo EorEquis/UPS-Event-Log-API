@@ -11,7 +11,7 @@ To read the WIndows Application log, and look for significant CyberPower UPS eve
 * Communication with the device has resumed
 and produce a JSON payload via a REST API that provides to flags, a powerFlag and a commFlag, which can be used to identify if UPS status is currently good or bad.  (0 or 1)
 
-This information will then feed the (Observatory COntrol Server)[https://github.com/EorEquis/TriStar-Observatory-Control-Server] as a "safety source".
+This information will then feed the [Observatory Control Server](https://github.com/EorEquis/TriStar-Observatory-Control-Server) as a "safety source".
 
 ## Current State
 
