@@ -1,5 +1,5 @@
 var builder = WebApplication.CreateBuilder(args);
-builder.WebHost.UseUrls("http://localhost:4242");
+builder.WebHost.UseUrls("http://*:4242");
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
