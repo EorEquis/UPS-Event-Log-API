@@ -74,7 +74,8 @@ namespace UPS_Event_Log_API.Controllers
             }
             var jsonPayload = new
             {
-                CurrentTimeUTC = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ"),
+                CurrentTimeUTC = DateTimeOffset.UtcNow.ToUnixTimeSeconds(),
+                //CurrentTimeUTC = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ"),
                 PowerFlag = powerFlag,
                 CommFlag = commFlag,
                 PowerFlagTime = powerFlagTime.ToString("yyyy-MM-ddTHH:mm:ssZ"),
